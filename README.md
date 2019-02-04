@@ -7,7 +7,7 @@ This package works similarly to http.Error providing a quick way to respond to e
 const (
     MetricsErrorCode = "error.metrics"
 )
-/ only support posts
+
 if r.Method != http.MethodGet {
     log.Printf("id %s: methd not allowed")
     resp := jsonerr.NewResponse(id, MetricsErrorCode, "method %s not allowed", r.Method)
